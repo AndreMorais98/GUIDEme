@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    container_name: guideme-db
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: guideme-mailhog
+    entrypoint: MailHog &>/dev/null
+    logging:
+      driver: "none"
+    ports:
+      - "8025:8025"
+
+  app:
+    build: .
+    restart: unless-stopped
+    container_name: guideme-app
+    command: sh /guideme/docker/start-guideme.sh
+    env_file: docker/config.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/guideme
+    depends_on:
+      - db
+      - mailhog

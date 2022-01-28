@@ -1,0 +1,13 @@
+FROM python:3.9
+
+WORKDIR /guideme
+
+COPY requirements /guideme/requirements
+
+COPY guideme /guideme/src
+COPY docker/start-guideme-stagging.sh /guideme/start-guideme.sh
+RUN chmod +x /guideme/start-guideme.sh
+
+RUN pip install -U -r /guideme/requirements/stagging.txt
+
+CMD [ "/guideme/start-guideme.sh" ]

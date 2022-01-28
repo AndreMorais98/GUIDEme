@@ -1,0 +1,5 @@
+-r common.txt
+
+mock==4.0.3
+flake8==4.0.1
+coverage==6.1.2

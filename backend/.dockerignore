@@ -1,0 +1,14 @@
+.log
+
+target/
+
+venv/
+
+.editorconfig
+.gitignore
+README.md
+LICENSE
+
+Dockerfile
+docker-compose.yml
+docker/config.env
