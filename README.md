@@ -1,7 +1,7 @@
 # GUIDEme - Plataforma de procura de guias turísticos
 
 <p align="center">
-   <img width="200" height="182" src="https://upload.wikimedia.org/wikipedia/commons/9/93/EEUMLOGO.png">
+   <img width="400" height="300" src="https://github.com/AndreMorais98/PI-GUIDEme/blob/main/frontend/app/assets/images/default.png">
 </p>
 
 ---
