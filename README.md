@@ -6,7 +6,7 @@
 
 ---
 
-###Trabalho realizado pelos elementos:
+### Trabalho realizado pelos elementos:
 
 - [André Morais, A83899](https://github.com/Demorales1998)
 - [Hugo Matias, A85370](https://github.com/Nysero)
